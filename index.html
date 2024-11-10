@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body class="flex justify-center items-center min-h-screen bg-[#ECF2F7]">
+    <div class="w-[1000px] bg-white flex rounded-md">
+      <img
+        class="max-w-full h-auto object-cover w-96 rounded-s-md"
+        src="images/drawers.jpg"
+      />
+      <div class="flex flex-col gap-4 p-8">
+        <h1 class="text-3xl">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="flex items-center gap-4 ">
+            <img
+              class="max-w-full h-auto w-12 rounded-full"
+              src="images/avatar-michelle.jpg"
+              alt=""
+            />
+          <div class="flex-1">
+            <p>Michelle Appleton</p>
+            <p>28 Jun 2020</p>
+          </div>
+          <img src="images/icon-share.svg" class="cursor-pointer" id="share" />
+          <div id="share-content" class="hidden bg-[#49576C] p-4 text-white rounded-lg">
+            <h2 class="text-sm font-semibold">SHARE</h2>
+            <div class="flex gap-2 mt-2">
+              <img src="images/icon-pinterest.svg" alt="Pinterest" class="w-6 h-6 cursor-pointer">
+              <img src="images/icon-facebook.svg" alt="Facebook" class="w-6 h-6 cursor-pointer">
+              <img src="images/icon-twitter.svg" alt="Twitter" class="w-6 h-6 cursor-pointer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const share = document.getElementById("share");
+      const shareContent = document.getElementById("share-content");
+      
+      share.addEventListener("click", () => {
+        shareContent.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
